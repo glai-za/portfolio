@@ -14,7 +14,7 @@ a {
 }
 .project-info a {
   color: #f1b24a;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 .container {
   min-height: 100vh;
@@ -29,8 +29,8 @@ img {
   object-fit: cover;
 }
 p {
-  color: black;
-  font-size: 1.8rem;
+  color: rgb(247, 241, 241);
+  font-size: 1.4rem;
   margin-top: 5px;
   line-height: 2.5rem;
   font-weight: 300;
@@ -40,13 +40,13 @@ p {
   font-size: 4rem;
   font-weight: 300;
   color: #f1b24a;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   text-align: center;
-  overflow: hidden;
+  /* overflow: hidden;
   position: relative;
-  user-select: none;
+  user-select: none; */
 }
 .sectionTitle span {
   position: relative;
@@ -67,7 +67,6 @@ p {
     filter: blur(20px);
   }
 }
-
 .cta {
   display: inline-block;
   padding: 10px 30px;
@@ -254,11 +253,11 @@ p {
   animation-delay: 1s;
 }
 #home h1:nth-child(2) {
-  text-indent: 150px;
+  text-indent: 90px;
   animation-delay: 2s;
 }
 #home h1:nth-child(3) {
-  text-indent: 250px;
+  text-indent: 130px;
   animation: text_reveal_name 0.5s ease forwards;
   animation-delay: 3s;
 }
@@ -281,7 +280,7 @@ p {
 #home h1:nth-child(3) span {
   animation-delay: 2.5s;
 }
-/* End Home Section */
+/* End Hero Section */
 
 /* Skills Section */
 #skills .skills {
@@ -334,10 +333,9 @@ p {
   font-size: 2rem;
   color: white;
   margin-bottom: 10px;
-  text-transform: uppercase;
   text-align: right;
 }
-/* End Skilss Section */
+/* End Skills Section */
 
 /* Projects section */
 #projects .projects {
@@ -370,7 +368,7 @@ p {
   flex-basis: 50%;
   height: 100%;
   display: flex;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   justify-content: center;
   flex-direction: column;
   background-image: linear-gradient(60deg, #4d774e 0%, #485563 100%);
@@ -379,11 +377,6 @@ p {
 #projects .project-info h1 {
   font-size: 4rem;
   font-weight: 500;
-}
-#projects .project-info h2 {
-  font-size: 1.8rem;
-  font-weight: 500;
-  margin-top: 10px;
 }
 #projects .project-info p {
   color: white;
@@ -410,6 +403,14 @@ p {
 #projects .project-item:hover .project-img img {
   transform: scale(1.1);
 }
+.project-img img,
+.project-info {
+  height: 300px;
+  width: 400px;
+  object-fit: contain;
+  align-items: center;
+}
+
 /* End Projects section */
 
 /* About Section */
@@ -421,60 +422,31 @@ p {
   padding: 100px 20px;
   background-image: linear-gradient(60deg, #4d774e 0%, #485563 100%);
 }
-#about .col-left {
-  width: 250px;
-  height: 360px;
-}
-#about .col-right {
+#about .col {
   width: 100%;
 }
-#about .col-right h2 {
-  font-size: 1.8rem;
-  font-weight: 500;
-  letter-spacing: 0.2rem;
-  margin-bottom: 10px;
-}
-#about .col-right p {
+#about .col p {
   margin-bottom: 20px;
 }
-#about .col-right .cta {
+#about .col .cta {
   color: white;
   margin-bottom: 50px;
   padding: 10px 20px;
   font-size: 2rem;
-}
-#about .col-left .about-img {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  border: 10px solid white;
-}
-#about .col-left .about-img::after {
-  content: '';
-  position: absolute;
-  left: -33px;
-  top: 19px;
-  height: 98%;
-  width: 98%;
-  border: 7px solid #f1b24a;
-  z-index: -1;
+
 }
 /* End About Section */
 
 /* contact Section */
 #contact .contact {
   flex-direction: column;
-  padding: 100px 0;
-  align-items: center;
-  justify-content: center;
-  min-width: 20vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
 }
 #contact .contact-items {
+  /* max-width: 400px; */
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin: 0;
 }
 #contact .contact-item {
   width: 80%;
@@ -487,8 +459,8 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  box-shadow: 0px 0px 18px 0 #0000002c;
-  transition: 0.3s ease box-shadow;
+  background-image: linear-gradient(60deg, #164a41 0%, #4d774e 100%);
+  color: rgb(239, 230, 230);
 }
 #contact .contact-item:hover {
   box-shadow: 0px 0px 5px 0 #0000002c;
@@ -504,7 +476,7 @@ p {
   margin-bottom: 5px;
 }
 #contact .contact-info h2 {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   line-height: 2rem;
   font-weight: 500;
 }
@@ -526,6 +498,13 @@ p {
   height: 50px;
   width: 50px;
   margin: 0 5px;
+}
+#footer .social-item img {
+  filter: grayscale(1);
+  transition: 0.3s ease filter;
+}
+#footer .social-item:hover img {
+  filter: grayscale(0);
 }
 /* End Footer */
 
@@ -563,117 +542,13 @@ p {
 }
 /* End Keyframes */
 
-/* Media Query For Mobile */
-@media only screen and (min-width: 480px) {
-  .cta {
-    font-size: 1.5rem;
-    padding: 15px 50px;
-  }
-  h1.sectionTitle {
-    font-size: 4rem;
-  }
-
-  /* Home */
-  #home h1 {
-    font-size: 6rem;
-  }
-  /* End Home */
-
-  /* Skills Section */
-  #skills .skills-bottom .skills-item {
-    flex-basis: 40%;
-    margin: 2%;
-  }
-  /* End Skills Section */
-
-  /* Project */
-  #projects .project-item {
-    flex-direction: row;
-  }
-  #projects .project-item:nth-child(even) {
-    flex-direction: row-reverse;
-  }
-  #projects .project-item {
-    height: 400px;
-    margin: 0;
-    width: 100%;
-    border-radius: 0;
-  }
-  #projects .all-projects .project-info {
-    height: 100%;
-  }
-  #projects .all-projects .project-img {
-    height: 100%;
-  }
-  /* End Project */
-
-  /* About */
-  #about .about {
-    flex-direction: row;
-  }
-  #about .col-left {
-    width: 600px;
-    height: 400px;
-    padding-left: 60px;
-  }
-  #about .about .col-left .about-img::after {
-    left: -40px;
-    top: 34px;
-    height: 98%;
-    width: 98%;
-    border: 10px solid #f1b24a;
-  }
-  #about .col-right {
-    text-align: left;
-    padding: 30px;
-  }
-  #about .col-right h1 {
-    text-align: left;
-  }
-  /* End About */
-
-  /* contact  */
-  #contact .contact {
-    flex-direction: column;
-    padding: 100px 0;
-    align-items: center;
-    justify-content: center;
-    min-width: 20vh;
-  }
-  #contact .contact-items {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  #contact .contact-item {
-    width: 50%;
-    margin: 5px;
-    text-align: center;
-    background-image: linear-gradient(60deg, #164a41 0%, #4d774e 100%);
-  }
-  #contact .contact-item .icon {
-    height: 60px;
-    width: 60px;
-  }
-  #contact .contact-item .icon img {
-    object-fit: contain;
-  }
-  #contact .contact-item .contact-info {
-    width: 100%;
-    text-align: center;
-  }
-}
-/* End contact  */
-/* End Media Query For Mobile */
-
 /* Media Query For Tablet */
 @media only screen and (min-width: 768px) {
   .cta {
     font-size: 2.5rem;
     padding: 20px 60px;
   }
-  h1.sectionTitle {
+  h1.section-title {
     font-size: 6rem;
   }
 
@@ -710,30 +585,21 @@ p {
   #projects .all-projects .project-img {
     height: 100%;
   }
-
+  .project-info a {
+    color: #f1b24a;
+    font-size: 3rem;
+  }
   /* End Project */
 
   /* About */
   #about .about {
     flex-direction: row;
   }
-  #about .col-left {
-    width: 600px;
-    height: 400px;
-    padding-left: 60px;
-  }
-  #about .about .col-left .about-img::after {
-    left: -45px;
-    top: 34px;
-    height: 98%;
-    width: 98%;
-    border: 10px solid #f1b24a;
-  }
-  #about .col-right {
+  #about .col {
     text-align: left;
     padding: 30px;
   }
-  #about .col-right h1 {
+  #about .col h1 {
     text-align: left;
   }
   /* End About */
@@ -745,6 +611,7 @@ p {
     align-items: center;
     justify-content: center;
     min-width: 20vh;
+    padding-bottom: 20px;
   }
   #contact .contact-items {
     width: 100%;
@@ -754,24 +621,26 @@ p {
     margin: 0;
   }
   #contact .contact-item {
-    width: 35%;
-    margin: 5px;
-    flex-direction: column;
+    width: 30%;
+    margin: 0;
+    flex-direction: row;
     background-image: linear-gradient(60deg, #164a41 0%, #4d774e 100%);
+
   }
   #contact .contact-item .icon {
-    height: 60px;
-    width: 60px;
+    height: 80px;
+    width: 80px;
   }
   #contact .contact-item .icon img {
     object-fit: contain;
   }
   #contact .contact-item .contact-info {
     width: 100%;
-    text-align: center;
+    text-align: left;
+    padding-left: 20px;
   }
+  /* End contact  */
 }
-/* End contact  */
 /* End Media Query For Tablet */
 
 /* Media Query For Desktop */
@@ -802,14 +671,9 @@ p {
     flex-basis: 22%;
     margin: 1.5%;
   }
-  #contact .contact-items .contact-item {
-    background-image: linear-gradient(60deg, #164a41 0%, #4d774e 100%);
-  }
-  #contact .contact-item {
-    width: 20%;
-  }
-  .project-img img {
-    object-fit: contain;
-  }
+.project-img {
+  display: flex;
+  align-items: center;
 }
 /* End  Media Query For Desktop */
+}
