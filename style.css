@@ -433,7 +433,6 @@ p {
   margin-bottom: 50px;
   padding: 10px 20px;
   font-size: 2rem;
-
 }
 /* End About Section */
 
@@ -625,7 +624,6 @@ p {
     margin: 0;
     flex-direction: row;
     background-image: linear-gradient(60deg, #164a41 0%, #4d774e 100%);
-
   }
   #contact .contact-item .icon {
     height: 80px;
@@ -667,13 +665,22 @@ p {
   }
   /* End header */
 
+  #about h1,
+  #about p {
+    display: flex;
+    justify-content: center;
+  }
+  #about p {
+    margin-top: 25px;
+    font-size: 2rem;
+  }
   #skills .skills-bottom .skills-item {
     flex-basis: 22%;
     margin: 1.5%;
   }
-.project-img {
-  display: flex;
-  align-items: center;
-}
-/* End  Media Query For Desktop */
+  .project-img {
+    display: flex;
+    align-items: center;
+  }
+  /* End  Media Query For Desktop */
 }
